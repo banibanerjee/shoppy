@@ -9,7 +9,7 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 
-const PORT = process.env.PORT || 10000; // Define PORT
+const PORT = process.env.PORT || 2000; // Define PORT
 
 app.use(express.json());
 app.use(cors());
@@ -18,7 +18,7 @@ app.use(cors());
 connectDb(); // Corrected function call
 
 app.listen(PORT, () => {
-    console.log(`Server listening at http://localhost:${PORT}`);
+    console.log(`Server listening at https://shoppy-swxy.onrender.com`);
 });
 
 // API creation
@@ -40,7 +40,7 @@ app.use('/images', express.static('upload/images'));
 app.post("/upload", upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `http://localhost:${PORT}/images/${req.file.filename}`
+        image_url: `https://shoppy-swxy.onrender.com/images/${req.file.filename}`
     });
 });
 

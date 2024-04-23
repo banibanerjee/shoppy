@@ -12,7 +12,10 @@ const cors = require("cors");
 const PORT = process.env.PORT || 2000; // Define PORT
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://main--tourmaline-otter-2946f9.netlify.app/',
+
+}));
 
 // Database connection with mongoose
 connectDb(); // Corrected function call

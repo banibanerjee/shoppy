@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 2000; // Define PORT
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://main--tourmaline-otter-2946f9.netlify.app/',
+    origin: 'https://shoppy-ui-git-main-bani-banerjees-projects.vercel.app/',
+    credentials: true
 
 }));
 
